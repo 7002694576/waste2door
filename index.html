@@ -8,6 +8,7 @@
     <title>Waste2Door | Doorstep Waste Pickup Bengaluru</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -41,7 +42,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 25px;
+            margin-left: 22px;
             font-size: 15px;
         }
 
@@ -58,7 +59,7 @@
         .hero h1 {
             font-size: 52px;
             color: #075c3a;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .hero h2 {
@@ -68,7 +69,7 @@
         }
 
         .hero p {
-            max-width: 750px;
+            max-width: 760px;
             margin: auto;
             font-size: 18px;
             color: #555;
@@ -76,13 +77,15 @@
 
         .btn {
             display: inline-block;
-            margin-top: 30px;
+            margin-top: 28px;
             padding: 14px 28px;
             background: #0b6b43;
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
+            border: none;
+            cursor: pointer;
         }
 
         .btn:hover {
@@ -187,6 +190,46 @@
             margin: 8px 0;
         }
 
+        .form-box {
+            max-width: 700px;
+            margin: 35px auto 0;
+            background: #f7faf8;
+            padding: 35px;
+            border-radius: 14px;
+            text-align: left;
+        }
+
+        .form-box h3 {
+            text-align: center;
+            color: #075c3a;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .form-box p {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        .form-box input,
+        .form-box textarea {
+            width: 100%;
+            padding: 14px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 15px;
+        }
+
+        .form-box textarea {
+            resize: vertical;
+        }
+
+        .form-box .btn {
+            width: 100%;
+        }
+
         footer {
             background: #063d28;
             color: white;
@@ -201,8 +244,13 @@
                 gap: 12px;
             }
 
+            nav {
+                text-align: center;
+            }
+
             nav a {
-                margin: 0 8px;
+                margin: 0 6px;
+                font-size: 13px;
             }
 
             .hero h1 {
@@ -216,12 +264,20 @@
             section {
                 padding: 50px 5%;
             }
+
+            .partner-box {
+                padding: 28px;
+            }
+
         }
+
     </style>
+
 </head>
 
 
 <body>
+
 
     <!-- HEADER -->
 
@@ -242,13 +298,16 @@
     </header>
 
 
+
     <!-- HERO -->
 
     <section class="hero">
 
         <h1>Waste2Door</h1>
 
-        <h2>Doorstep Waste Pickup for Bengaluru</h2>
+        <h2>
+            Doorstep Waste Pickup for Bengaluru
+        </h2>
 
         <p>
             A convenient doorstep household waste pickup service
@@ -262,6 +321,7 @@
         </a>
 
     </section>
+
 
 
     <!-- PROBLEM -->
@@ -278,7 +338,9 @@
 
                 <div class="number">01</div>
 
-                <h3>Missed Collection</h3>
+                <h3>
+                    Missed Collection
+                </h3>
 
                 <p>
                     Many working professionals and tenants are away
@@ -293,11 +355,13 @@
 
                 <div class="number">02</div>
 
-                <h3>Storage at Home</h3>
+                <h3>
+                    Waste at Home
+                </h3>
 
                 <p>
                     Household waste may remain inside homes until the
-                    next collection opportunity.
+                    next available collection opportunity.
                 </p>
 
             </div>
@@ -307,7 +371,9 @@
 
                 <div class="number">03</div>
 
-                <h3>Improper Disposal</h3>
+                <h3>
+                    Improper Disposal
+                </h3>
 
                 <p>
                     Lack of convenient disposal options can contribute
@@ -319,6 +385,7 @@
         </div>
 
     </section>
+
 
 
     <!-- SOLUTION -->
@@ -335,7 +402,9 @@
 
                 <div class="number">01</div>
 
-                <h3>Book Pickup</h3>
+                <h3>
+                    Book Pickup
+                </h3>
 
                 <p>
                     Customer requests a waste pickup through the
@@ -349,7 +418,9 @@
 
                 <div class="number">02</div>
 
-                <h3>Dedicated Rider</h3>
+                <h3>
+                    Dedicated Rider
+                </h3>
 
                 <p>
                     A trained rider reaches the customer's doorstep
@@ -363,7 +434,9 @@
 
                 <div class="number">03</div>
 
-                <h3>Waste Handover</h3>
+                <h3>
+                    Waste Handover
+                </h3>
 
                 <p>
                     Segregated household waste is transported to an
@@ -378,7 +451,9 @@
 
                 <div class="number">04</div>
 
-                <h3>Responsible Disposal</h3>
+                <h3>
+                    Responsible Disposal
+                </h3>
 
                 <p>
                     Waste enters the authorised municipal waste
@@ -392,6 +467,7 @@
     </section>
 
 
+
     <!-- HOW IT WORKS -->
 
     <section>
@@ -403,37 +479,61 @@
         <div class="cards">
 
             <div class="card">
-                <h3>Customer</h3>
+
+                <h3>
+                    Customer
+                </h3>
+
                 <p>
                     Books a pickup from home.
                 </p>
+
             </div>
 
+
             <div class="card">
-                <h3>Waste2Door App</h3>
+
+                <h3>
+                    Waste2Door Platform
+                </h3>
+
                 <p>
                     Assigns the pickup request to an available rider.
                 </p>
+
             </div>
 
+
             <div class="card">
-                <h3>Rider</h3>
+
+                <h3>
+                    Rider
+                </h3>
+
                 <p>
                     Collects segregated waste from the doorstep.
                 </p>
+
             </div>
 
+
             <div class="card">
-                <h3>Authorised Handover</h3>
+
+                <h3>
+                    Authorised Handover
+                </h3>
+
                 <p>
                     Waste is handed over only through an approved
                     municipal or authorised process.
                 </p>
+
             </div>
 
         </div>
 
     </section>
+
 
 
     <!-- TARGET CUSTOMERS -->
@@ -447,32 +547,49 @@
         <div class="cards">
 
             <div class="card">
-                <h3>Working Professionals</h3>
+
+                <h3>
+                    Working Professionals
+                </h3>
+
                 <p>
                     People who leave home before municipal collection
                     and return after collection hours.
                 </p>
+
             </div>
 
+
             <div class="card">
-                <h3>Tenants & PG Residents</h3>
+
+                <h3>
+                    Tenants & PG Residents
+                </h3>
+
                 <p>
                     Residents looking for a convenient and responsible
                     waste disposal option.
                 </p>
+
             </div>
 
+
             <div class="card">
-                <h3>Apartments</h3>
+
+                <h3>
+                    Apartment Residents
+                </h3>
+
                 <p>
-                    Apartment residents requiring additional pickup
-                    flexibility.
+                    Residents requiring additional pickup flexibility.
                 </p>
+
             </div>
 
         </div>
 
     </section>
+
 
 
     <!-- BUSINESS MODEL -->
@@ -511,6 +628,7 @@
     </section>
 
 
+
     <!-- TECHNOLOGY -->
 
     <section>
@@ -523,7 +641,9 @@
 
             <div class="card">
 
-                <h3>Customer App</h3>
+                <h3>
+                    Customer App
+                </h3>
 
                 <p>
                     Pickup booking, address, time slot, payment and
@@ -535,7 +655,9 @@
 
             <div class="card">
 
-                <h3>Rider App</h3>
+                <h3>
+                    Rider App
+                </h3>
 
                 <p>
                     Pickup requests, navigation, status updates and
@@ -547,7 +669,9 @@
 
             <div class="card">
 
-                <h3>Admin Dashboard</h3>
+                <h3>
+                    Admin Dashboard
+                </h3>
 
                 <p>
                     Rider management, customer management, operations,
@@ -559,6 +683,7 @@
         </div>
 
     </section>
+
 
 
     <!-- REGULATORY -->
@@ -575,8 +700,6 @@
                 Waste2Door intends to operate only through an approved
                 and compliant waste-management process.
             </p>
-
-            <br>
 
             <ul>
 
@@ -607,7 +730,8 @@
     </section>
 
 
-    <!-- PARTNER -->
+
+    <!-- PARTNER / INVESTOR -->
 
     <section id="partner" class="partner">
 
@@ -618,14 +742,17 @@
         <div class="partner-box">
 
             <h3>
-                We are looking for a strategic partner who can help
-                turn this concept into a working Bengaluru pilot.
+                Help us turn the Waste2Door concept into a
+                working Bengaluru pilot.
             </h3>
 
             <br>
 
             <p>
-                The ideal partner may contribute in areas such as:
+                We are looking for strategic partners, startup
+                organisations and investors who may be interested
+                in supporting the development and validation of
+                this concept.
             </p>
 
             <ul>
@@ -659,7 +786,7 @@
                 </li>
 
                 <li>
-                    Connecting with additional investors
+                    Connections with additional investors
                 </li>
 
             </ul>
@@ -681,6 +808,7 @@
     </section>
 
 
+
     <!-- VISION -->
 
     <section>
@@ -691,16 +819,19 @@
 
         <div class="business-model">
 
-            <p style="font-size: 20px;">
-                Make responsible household waste disposal easier for
-                people who cannot depend on fixed municipal collection
-                timings — while working within the authorised
-                municipal waste-management system.
+            <p style="font-size:20px;">
+
+                Make responsible household waste disposal easier
+                for people who cannot depend on fixed municipal
+                collection timings — while working within the
+                authorised municipal waste-management system.
+
             </p>
 
         </div>
 
     </section>
+
 
 
     <!-- CONTACT -->
@@ -724,14 +855,77 @@
         </p>
 
         <p>
-            <strong>Purpose:</strong> Strategic Partnership / Investment
+            <strong>Purpose:</strong>
+            Strategic Partnership / Investment
         </p>
+
+
+        <!-- EMAIL BUTTON -->
 
         <a href="mailto:razi.o2f@gmail.com" class="btn">
             Contact Founder
         </a>
 
+
+        <!-- ENQUIRY FORM -->
+
+        <div class="form-box">
+
+            <h3>
+                Partner / Investor Enquiry
+            </h3>
+
+            <p>
+                Interested in partnering with or investing in
+                Waste2Door? Send us a message.
+            </p>
+
+            <form
+                action="mailto:razi.o2f@gmail.com"
+                method="post"
+                enctype="text/plain"
+            >
+
+                <input
+                    type="text"
+                    name="Name"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    name="Email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    name="Organization"
+                    placeholder="Organization / Company"
+                >
+
+                <textarea
+                    name="Message"
+                    rows="5"
+                    placeholder="Tell us about your partnership / investment interest"
+                    required
+                ></textarea>
+
+                <button
+                    type="submit"
+                    class="btn"
+                >
+                    Send Enquiry
+                </button>
+
+            </form>
+
+        </div>
+
     </section>
+
 
 
     <!-- FOOTER -->
@@ -741,6 +935,7 @@
         © 2026 Waste2Door. All rights reserved.
 
     </footer>
+
 
 </body>
 

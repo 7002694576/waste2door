@@ -1,1438 +1,1727 @@
-```html
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Waste2Door | Doorstep Waste Pickup Bengaluru</title>
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: #f5f8f6;
-            color: #1f2933;
-            line-height: 1.6;
-        }
-
-        header {
-            background: #0b6b43;
-            color: white;
-            padding: 18px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo {
-            font-size: 27px;
-            font-weight: bold;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 18px;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #e7f7ee, #ffffff);
-            padding: 90px 7%;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 52px;
-            color: #075c3a;
-            margin-bottom: 18px;
-        }
-
-        .hero h2 {
-            font-size: 25px;
-            color: #333;
-            margin-bottom: 18px;
-        }
-
-        .hero p {
-            max-width: 760px;
-            margin: auto;
-            font-size: 18px;
-            color: #555;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 28px;
-            padding: 14px 28px;
-            background: #0b6b43;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background: #084d31;
-        }
-
-        .pitch-btn {
-            background: #075c3a;
-            margin-left: 10px;
-        }
-
-        .pitch-btn:hover {
-            background: #043d27;
-        }
-
-        section {
-            padding: 70px 7%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 34px;
-            color: #075c3a;
-            margin-bottom: 45px;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 25px;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 14px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .card h3 {
-            color: #0b6b43;
-            margin-bottom: 12px;
-        }
-
-        .number {
-            font-size: 32px;
-            font-weight: bold;
-            color: #0b6b43;
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            background: #0b6b43;
-            color: white;
-        }
-
-        .highlight .section-title {
-            color: white;
-        }
-
-        .highlight .card h3 {
-            color: #0b6b43;
-        }
-
-        .business-model {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .price {
-            font-size: 48px;
-            color: #0b6b43;
-            font-weight: bold;
-            margin: 15px 0;
-        }
-
-        .partner {
-            background: #eef8f2;
-        }
-
-        .partner-box {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 45px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .partner-box ul {
-            margin: 20px 0 0 20px;
-        }
-
-        .partner-box li {
-            margin-bottom: 12px;
-        }
-
-        .pilot {
-            background: #ffffff;
-        }
-
-        .pilot-box {
-            max-width: 950px;
-            margin: auto;
-        }
-
-        .pilot-step {
-            background: white;
-            padding: 28px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-        }
-
-        .pilot-step h3 {
-            color: #0b6b43;
-            margin-bottom: 8px;
-        }
-
-        .looking {
-            background: #f0f7f3;
-        }
-
-        /* INVESTOR PITCH DECK */
-
-        .pitch-section {
-            background: linear-gradient(135deg, #e7f7ee, #ffffff);
-        }
-
-        .pitch-box {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 50px 35px;
-            border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            text-align: center;
-        }
-
-        .pitch-icon {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
-
-        .pitch-box h3 {
-            color: #075c3a;
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-
-        .pitch-box p {
-            max-width: 700px;
-            margin: 10px auto;
-            color: #555;
-            font-size: 17px;
-        }
-
-        .download-btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 16px 32px;
-            background: #0b6b43;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 17px;
-        }
-
-        .download-btn:hover {
-            background: #084d31;
-        }
-
-        .pitch-note {
-            font-size: 13px !important;
-            color: #777 !important;
-            margin-top: 15px !important;
-        }
-
-        .contact {
-            text-align: center;
-            background: white;
-        }
-
-        .contact p {
-            margin: 8px 0;
-        }
-
-        .form-box {
-            max-width: 700px;
-            margin: 35px auto 0;
-            background: #f7faf8;
-            padding: 35px;
-            border-radius: 14px;
-            text-align: left;
-        }
-
-        .form-box h3 {
-            text-align: center;
-            color: #075c3a;
-            font-size: 25px;
-            margin-bottom: 10px;
-        }
-
-        .form-box p {
-            text-align: center;
-            margin-bottom: 25px;
-            color: #555;
-        }
-
-        .form-box input,
-        .form-box textarea {
-            width: 100%;
-            padding: 14px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 7px;
-            font-size: 15px;
-        }
-
-        .form-box textarea {
-            resize: vertical;
-        }
-
-        .form-box .btn {
-            width: 100%;
-        }
-
-        footer {
-            background: #063d28;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        @media (max-width: 700px) {
-
-            header {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            nav {
-                text-align: center;
-                line-height: 2;
-            }
-
-            nav a {
-                margin: 0 5px;
-                font-size: 12px;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .hero h2 {
-                font-size: 21px;
-            }
-
-            section {
-                padding: 50px 5%;
-            }
-
-            .partner-box {
-                padding: 28px;
-            }
-
-            .pitch-box {
-                padding: 35px 20px;
-            }
-
-            .pitch-btn {
-                margin-left: 0;
-            }
-
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Waste2Door | Doorstep Waste Pickup Bengaluru</title>
+
+<meta name="description" content="Waste2Door is a Bengaluru-focused doorstep household waste pickup concept connecting households with convenient and responsible waste collection.">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #183028;
+    background: #f7fbf8;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0b6b43;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #b7f7cf;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #b7f7cf;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #063f2b,
+        #0b6b43,
+        #13935d
+    );
+    color: white;
+    padding: 80px 20px;
+}
+
+.hero-container {
+    max-width: 1150px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #b7f7cf;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 650px;
+    color: #e6fff0;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.btn-primary {
+    background: white;
+    color: #0b6b43;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #0b6b43;
+}
+
+.hero-card {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 35px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.hero-card-icon {
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+.hero-card h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.hero-card p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+/* =========================
+   COMMON
+========================= */
+
+section {
+    padding: 75px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #084d32;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+    color: #60736b;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+    border: 1px solid #e3eee8;
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #0b6b43;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #60736b;
+}
+
+/* =========================
+   PROBLEM
+========================= */
+
+.problem {
+    background: white;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+    color: #52665d;
+}
+
+/* =========================
+   FOUNDER
+========================= */
+
+.founder {
+    background: #edf8f1;
+}
+
+.founder-box {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+}
+
+.founder-avatar {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+    background: #0b6b43;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.founder-box h3 {
+    font-size: 28px;
+    color: #084d32;
+}
+
+.founder-box p {
+    color: #61736b;
+}
+
+/* =========================
+   SOLUTION
+========================= */
+
+.solution {
+    background: white;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step {
+    text-align: center;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: auto auto 15px;
+    background: #0b6b43;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* =========================
+   BUSINESS MODEL
+========================= */
+
+.business {
+    background: #063f2b;
+    color: white;
+}
+
+.business .section-title {
+    color: white;
+}
+
+.business .section-subtitle {
+    color: #d4f1df;
+}
+
+.business-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.business-card {
+    padding: 35px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.business-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 45px;
+    font-weight: bold;
+    color: #b7f7cf;
+    margin-bottom: 10px;
+}
+
+.business-card ul {
+    padding-left: 20px;
+}
+
+.business-card li {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   TECHNOLOGY
+========================= */
+
+.tech {
+    background: #f0f8f3;
+}
+
+/* =========================
+   PILOT
+========================= */
+
+.pilot {
+    background: white;
+}
+
+.pilot-timeline {
+    max-width: 900px;
+    margin: auto;
+}
+
+.pilot-item {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 15px;
+    background: #f5faf7;
+    border-left: 5px solid #0b6b43;
+}
+
+.pilot-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0b6b43;
+}
+
+/* =========================
+   INVESTOR PITCH
+========================= */
+
+.pitch-section {
+    background: linear-gradient(135deg, #eaf8ef, #f8fcf9);
+}
+
+.pitch-box {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 50px 35px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+    border: 1px solid #dceee3;
+}
+
+.pitch-icon {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.pitch-box h3 {
+    font-size: 30px;
+    color: #084d32;
+    margin-bottom: 15px;
+}
+
+.pitch-box p {
+    color: #60736b;
+    max-width: 650px;
+    margin: 10px auto;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 28px;
+    background: #0b6b43;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.download-btn:hover {
+    background: #063f2b;
+    transform: translateY(-2px);
+}
+
+.pitch-note {
+    font-size: 13px;
+    margin-top: 15px !important;
+}
+
+/* =========================
+   INVESTOR CTA
+========================= */
+
+.investor-cta {
+    background: #0b6b43;
+    color: white;
+    text-align: center;
+}
+
+.investor-cta h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.investor-cta p {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    color: #e0f7e9;
+    font-size: 18px;
+}
+
+/* =========================
+   REGULATORY
+========================= */
+
+.regulatory {
+    background: #f0f7f3;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: white;
+}
+
+.contact-box {
+    max-width: 750px;
+    margin: auto;
+}
+
+.contact-form {
+    background: #f5faf7;
+    padding: 35px;
+    border-radius: 18px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbdcd2;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    border: none;
+    background: #0b6b43;
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #063f2b;
+}
+
+/* =========================
+   VISION
+========================= */
+
+.vision {
+    background: #063f2b;
+    color: white;
+    text-align: center;
+}
+
+.vision h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.vision p {
+    max-width: 800px;
+    margin: auto;
+    color: #d9f5e4;
+    font-size: 18px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #03271b;
+    color: #b8cec3;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer strong {
+    color: white;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .business-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 60px 18px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .investor-cta h2,
+    .vision h2 {
+        font-size: 32px;
+    }
+
+}
+
+</style>
 
 </head>
 
-
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
 
-    <!-- HEADER -->
+<header>
 
-    <header>
+<div class="navbar">
 
-        <div class="logo">
-            ♻️ Waste2Door
-        </div>
+<a href="#home" class="logo">
+Waste<span>2</span>Door
+</a>
 
-        <nav>
+<nav>
+<a href="#problem">Problem</a>
+<a href="#solution">Solution</a>
+<a href="#how">How It Works</a>
+<a href="#business">Business</a>
+<a href="#pilot">Pilot</a>
+<a href="#pitch">Pitch Deck</a>
+<a href="#contact">Contact</a>
+</nav>
 
-            <a href="#problem">Problem</a>
+</div>
 
-            <a href="#about">About</a>
+</header>
 
-            <a href="#solution">Solution</a>
+<!-- =========================
+     HERO
+========================= -->
 
-            <a href="#business">Business</a>
+<section class="hero" id="home">
 
-            <a href="#pilot">Pilot</a>
+<div class="hero-container">
 
-            <a href="#partner">Partner</a>
+<div>
 
-            <a href="#pitch">Pitch Deck</a>
+<h1>
+Your Waste.<br>
+<span>Our Responsibility.</span>
+</h1>
 
-            <a href="#contact">Contact</a>
+<p>
+Waste2Door is a Bengaluru-focused doorstep household
+waste pickup concept designed to make waste collection
+more convenient, organised and responsible.
+</p>
 
-        </nav>
+<div class="hero-buttons">
 
-    </header>
+<a href="#contact" class="btn btn-primary">
+🤝 Partner With Us
+</a>
 
+<a href="#pitch" class="btn btn-secondary">
+📊 Investor Pitch Deck
+</a>
 
+</div>
 
-    <!-- HERO -->
+</div>
 
-    <section class="hero">
+<div class="hero-card">
 
-        <h1>
-            Waste2Door
-        </h1>
+<div class="hero-card-icon">
+🚛
+</div>
 
-        <h2>
-            Doorstep Waste Pickup for Bengaluru
-        </h2>
+<h3>
+Doorstep Waste Pickup
+</h3>
 
-        <p>
-            A convenient doorstep household waste pickup service designed
-            for tenants, working professionals and residents who are unable
-            to hand over their waste during regular municipal collection hours.
-        </p>
+<p>
+A simple technology-enabled model connecting
+households with scheduled waste pickup.
+</p>
 
-        <a href="#partner" class="btn">
-            Partner With Us
-        </a>
+</div>
 
-        <a href="#pitch" class="btn pitch-btn">
-            📊 Investor Pitch Deck
-        </a>
+</div>
 
-    </section>
+</section>
 
+<!-- =========================
+     PROBLEM
+========================= -->
 
+<section class="problem" id="problem">
 
-    <!-- PROBLEM -->
+<div class="container">
 
-    <section id="problem">
+<h2 class="section-title">
+The Problem
+</h2>
 
-        <h2 class="section-title">
-            The Problem
-        </h2>
+<p class="section-subtitle">
+Urban households need convenient and reliable ways
+to manage household waste while maintaining responsible
+waste-handling practices.
+</p>
 
-        <div class="cards">
+<div class="cards">
 
-            <div class="card">
+<div class="card">
 
-                <div class="number">
-                    01
-                </div>
+<div class="card-icon">🗑️</div>
 
-                <h3>
-                    Missed Collection
-                </h3>
+<h3>
+Daily Waste Challenge
+</h3>
 
-                <p>
-                    Many working professionals and tenants are away from home
-                    when municipal waste collection vehicles arrive.
-                </p>
+<p>
+Households generate waste every day and need
+a predictable way to hand it over.
+</p>
 
-            </div>
+</div>
 
+<div class="card">
 
-            <div class="card">
+<div class="card-icon">⏰</div>
 
-                <div class="number">
-                    02
-                </div>
+<h3>
+Convenience Gap
+</h3>
 
-                <h3>
-                    Waste at Home
-                </h3>
+<p>
+Busy families may find fixed collection schedules
+difficult to manage.
+</p>
 
-                <p>
-                    Household waste may remain inside homes until the next
-                    available collection opportunity.
-                </p>
+</div>
 
-            </div>
+<div class="card">
 
+<div class="card-icon">♻️</div>
 
-            <div class="card">
+<h3>
+Responsible Handling
+</h3>
 
-                <div class="number">
-                    03
-                </div>
+<p>
+Waste needs to move through authorised municipal
+or approved waste-management processes.
+</p>
 
-                <h3>
-                    Improper Disposal
-                </h3>
+</div>
 
-                <p>
-                    Lack of convenient disposal options can contribute to waste
-                    being placed in unauthorised locations.
-                </p>
+</div>
 
-            </div>
+</div>
 
-        </div>
+</section>
 
-    </section>
+<!-- =========================
+     ABOUT
+========================= -->
 
+<section id="about">
 
+<div class="container">
 
-    <!-- ABOUT -->
+<h2 class="section-title">
+About Waste2Door
+</h2>
 
-    <section id="about">
+<div class="about-content">
 
-        <h2 class="section-title">
-            About Waste2Door
-        </h2>
+<p>
+Waste2Door is an early-stage concept focused on building
+a convenient doorstep household waste pickup service for
+urban households in Bengaluru.
+</p>
 
-        <div class="business-model">
+<br>
 
-            <p style="font-size:20px;">
+<p>
+The goal is to combine simple technology, scheduled pickups,
+customer communication and responsible waste-management
+practices into one easy-to-use service.
+</p>
 
-                Waste2Door is a Bengaluru-focused doorstep household waste
-                pickup concept designed for residents who are unable to
-                hand over their household waste during regular municipal
-                collection timings.
+</div>
 
-            </p>
+</div>
 
-            <br>
+</section>
 
-            <p>
+<!-- =========================
+     FOUNDER
+========================= -->
 
-                The idea is to provide a convenient pickup option while
-                ensuring that collected waste is handed over only through
-                an authorised municipal or approved waste-management process.
+<section class="founder" id="founder">
 
-            </p>
+<div class="container">
 
-            <br>
+<h2 class="section-title">
+Founder
+</h2>
 
-            <p>
+<div class="founder-box">
 
-                Waste2Door is currently at the concept and early development
-                stage, with the objective of validating the model through
-                a controlled pilot before scaling.
+<div class="founder-avatar">
+RA
+</div>
 
-            </p>
+<h3>
+Razi Ahmad
+</h3>
 
-        </div>
+<p>
+Founder — Waste2Door
+</p>
 
-    </section>
+<br>
 
+<p>
+Building a technology-enabled concept for convenient
+doorstep household waste pickup in Bengaluru.
+</p>
 
+</div>
 
-    <!-- FOUNDER -->
+</div>
 
-    <section>
+</section>
 
-        <h2 class="section-title">
-            Founder
-        </h2>
+<!-- =========================
+     SOLUTION
+========================= -->
 
-        <div class="cards">
+<section class="solution" id="solution">
 
-            <div class="card">
+<div class="container">
 
-                <h3>
-                    Razi Ahmad
-                </h3>
+<h2 class="section-title">
+Our Proposed Solution
+</h2>
 
-                <p>
-                    Founder, Waste2Door
-                </p>
+<p class="section-subtitle">
+A simple customer journey designed around convenience,
+scheduled pickup and responsible waste handling.
+</p>
 
-                <br>
+<div class="cards">
 
-                <p>
+<div class="card">
 
-                    Building Waste2Door with a focus on solving a practical
-                    everyday problem faced by working professionals, tenants
-                    and urban residents.
+<div class="card-icon">📱</div>
 
-                </p>
+<h3>
+Easy Booking
+</h3>
 
-                <br>
+<p>
+Customers can request or schedule a waste pickup
+through the Waste2Door platform.
+</p>
 
-                <p>
+</div>
 
-                    The current focus is on regulatory understanding,
-                    pilot validation, technology development and finding
-                    the right strategic partners to build the service.
+<div class="card">
 
-                </p>
+<div class="card-icon">🚛</div>
 
-            </div>
+<h3>
+Doorstep Pickup
+</h3>
 
+<p>
+A pickup partner collects household waste from
+the customer's doorstep.
+</p>
 
-            <div class="card">
+</div>
 
-                <h3>
-                    Current Stage
-                </h3>
+<div class="card">
 
-                <p>
-                    Concept & Early Development
-                </p>
+<div class="card-icon">♻️</div>
 
-                <br>
+<h3>
+Responsible Process
+</h3>
 
-                <p>
+<p>
+Waste handling will follow applicable municipal,
+authorised or approved waste-management processes.
+</p>
 
-                    Seeking strategic partners who can contribute to
-                    regulatory coordination, technology, operations,
-                    pilot execution and potential investment.
+</div>
 
-                </p>
+</div>
 
-            </div>
+</div>
 
-        </div>
+</section>
 
-    </section>
+<!-- =========================
+     HOW IT WORKS
+========================= -->
 
+<section id="how">
 
+<div class="container">
 
-    <!-- SOLUTION -->
+<h2 class="section-title">
+How It Works
+</h2>
 
-    <section id="solution" class="highlight">
+<p class="section-subtitle">
+Four simple steps for a potential customer.
+</p>
 
-        <h2 class="section-title">
-            Our Solution
-        </h2>
+<div class="steps">
 
-        <div class="cards">
+<div class="step">
 
-            <div class="card">
+<div class="step-number">
+1
+</div>
 
-                <div class="number">
-                    01
-                </div>
+<h3>
+Book
+</h3>
 
-                <h3>
-                    Book Pickup
-                </h3>
+<p>
+Customer requests a pickup.
+</p>
 
-                <p>
-                    Customer requests a waste pickup through the Waste2Door platform.
-                </p>
+</div>
 
-            </div>
+<div class="step">
 
+<div class="step-number">
+2
+</div>
 
-            <div class="card">
+<h3>
+Schedule
+</h3>
 
-                <div class="number">
-                    02
-                </div>
+<p>
+Pickup timing is confirmed.
+</p>
 
-                <h3>
-                    Dedicated Rider
-                </h3>
+</div>
 
-                <p>
-                    A trained rider reaches the customer's doorstep at the selected time.
-                </p>
+<div class="step">
 
-            </div>
+<div class="step-number">
+3
+</div>
 
+<h3>
+Pickup
+</h3>
 
-            <div class="card">
+<p>
+Waste is collected from the doorstep.
+</p>
 
-                <div class="number">
-                    03
-                </div>
+</div>
 
-                <h3>
-                    Waste Handover
-                </h3>
+<div class="step">
 
-                <p>
+<div class="step-number">
+4
+</div>
 
-                    Segregated household waste is transported to an authorised
-                    municipal collection point or approved handover location.
+<h3>
+Process
+</h3>
 
-                </p>
+<p>
+Waste moves through the appropriate
+approved process.
+</p>
 
-            </div>
+</div>
 
+</div>
 
-            <div class="card">
+</div>
 
-                <div class="number">
-                    04
-                </div>
+</section>
 
-                <h3>
-                    Responsible Disposal
-                </h3>
+<!-- =========================
+     TARGET CUSTOMERS
+========================= -->
 
-                <p>
+<section id="customers">
 
-                    Waste enters the authorised municipal waste management system.
+<div class="container">
 
-                </p>
+<h2 class="section-title">
+Target Customers
+</h2>
 
-            </div>
+<p class="section-subtitle">
+Initial customer segments for the proposed Bengaluru pilot.
+</p>
 
-        </div>
+<div class="cards">
 
-    </section>
+<div class="card">
 
+<div class="card-icon">🏠</div>
 
+<h3>
+Apartments
+</h3>
 
-    <!-- HOW IT WORKS -->
+<p>
+Apartment communities and residential societies
+looking for organised collection options.
+</p>
 
-    <section>
+</div>
 
-        <h2 class="section-title">
-            How Waste2Door Works
-        </h2>
+<div class="card">
 
-        <div class="cards">
+<div class="card-icon">👨‍👩‍👧‍👦</div>
 
-            <div class="card">
+<h3>
+Families
+</h3>
 
-                <h3>
-                    Customer
-                </h3>
+<p>
+Busy households that value convenient
+scheduled services.
+</p>
 
-                <p>
-                    Books a pickup from home.
-                </p>
+</div>
 
-            </div>
+<div class="card">
 
+<div class="card-icon">🏢</div>
 
-            <div class="card">
+<h3>
+Urban Communities
+</h3>
 
-                <h3>
-                    Waste2Door Platform
-                </h3>
+<p>
+Residential clusters where a local pickup model
+can potentially be tested.
+</p>
 
-                <p>
+</div>
 
-                    Assigns the pickup request to an available rider.
+</div>
 
-                </p>
+</div>
 
-            </div>
+</section>
 
+<!-- =========================
+     BUSINESS MODEL
+========================= -->
 
-            <div class="card">
+<section class="business" id="business">
 
-                <h3>
-                    Rider
-                </h3>
+<div class="container">
 
-                <p>
+<h2 class="section-title">
+Business Model
+</h2>
 
-                    Collects segregated waste from the doorstep.
+<p class="section-subtitle">
+An initial proposed pricing model that can be validated
+during the pilot.
+</p>
 
-                </p>
+<div class="business-grid">
 
-            </div>
+<div class="business-card">
 
+<h3>
+Proposed Starting Price
+</h3>
 
-            <div class="card">
+<div class="price">
+₹100
+</div>
 
-                <h3>
-                    Authorised Handover
-                </h3>
+<p>
+per pickup — proposed starting point for pilot testing.
+</p>
 
-                <p>
+</div>
 
-                    Waste is handed over only through an approved municipal
-                    or authorised process.
+<div class="business-card">
 
-                </p>
+<h3>
+Potential Revenue Streams
+</h3>
 
-            </div>
+<ul>
 
-        </div>
+<li>Individual household pickup charges</li>
 
-    </section>
+<li>Recurring household subscriptions</li>
 
+<li>Apartment/community partnerships</li>
 
+<li>Potential B2B waste-management partnerships</li>
 
-    <!-- TARGET CUSTOMERS -->
+</ul>
 
-    <section>
+</div>
 
-        <h2 class="section-title">
-            Target Customers
-        </h2>
+</div>
 
-        <div class="cards">
+</div>
 
-            <div class="card">
+</section>
 
-                <h3>
-                    Working Professionals
-                </h3>
+<!-- =========================
+     TECHNOLOGY
+========================= -->
 
-                <p>
+<section class="tech" id="technology">
 
-                    People who leave home before municipal collection and
-                    return after collection hours.
+<div class="container">
 
-                </p>
+<h2 class="section-title">
+Technology & Operations
+</h2>
 
-            </div>
+<p class="section-subtitle">
+Technology can help coordinate customers, pickups
+and operational visibility.
+</p>
 
+<div class="cards">
 
-            <div class="card">
+<div class="card">
 
-                <h3>
-                    Tenants & PG Residents
-                </h3>
+<div class="card-icon">💻</div>
 
-                <p>
+<h3>
+Customer Platform
+</h3>
 
-                    Residents looking for a convenient and responsible
-                    waste disposal option.
+<p>
+Website and future mobile interface for
+pickup requests and customer communication.
+</p>
 
-                </p>
+</div>
 
-            </div>
+<div class="card">
 
+<div class="card-icon">📍</div>
 
-            <div class="card">
+<h3>
+Pickup Management
+</h3>
 
-                <h3>
-                    Apartment Residents
-                </h3>
+<p>
+Potential scheduling and assignment system
+for pickup operations.
+</p>
 
-                <p>
+</div>
 
-                    Residents requiring additional pickup flexibility.
+<div class="card">
 
-                </p>
+<div class="card-icon">📊</div>
 
-            </div>
+<h3>
+Data & Analytics
+</h3>
 
-        </div>
+<p>
+Track pickups, customers, service areas and
+pilot performance.
+</p>
 
-    </section>
+</div>
 
+</div>
 
+</div>
 
-    <!-- BUSINESS MODEL -->
+</section>
 
-    <section id="business">
+<!-- =========================
+     PILOT
+========================= -->
 
-        <h2 class="section-title">
-            Proposed Business Model
-        </h2>
+<section class="pilot" id="pilot">
 
-        <div class="business-model">
+<div class="container">
 
-            <p>
+<h2 class="section-title">
+Proposed Bengaluru Pilot
+</h2>
 
-                Waste2Door proposes an affordable on-demand doorstep
-                pickup service.
+<p class="section-subtitle">
+Start small, validate the model and expand based on
+real customer and operational data.
+</p>
 
-            </p>
+<div class="pilot-timeline">
 
-            <div class="price">
-                ₹100
-            </div>
+<div class="pilot-item">
 
-            <p>
-                Proposed starting price per household pickup.
-            </p>
+<div class="pilot-number">
+01
+</div>
 
-            <br>
+<div>
 
-            <p>
+<h3>
+Select Pilot Area
+</h3>
 
-                Revenue can later be expanded through apartment partnerships,
-                subscriptions, recurring pickups and institutional services.
+<p>
+Identify a suitable Bengaluru residential cluster
+for initial testing.
+</p>
 
-            </p>
+</div>
 
-        </div>
+</div>
 
-    </section>
+<div class="pilot-item">
 
+<div class="pilot-number">
+02
+</div>
 
+<div>
 
-    <!-- TECHNOLOGY -->
+<h3>
+Acquire Initial Customers
+</h3>
 
-    <section>
+<p>
+Onboard an initial group of households and
+residential communities.
+</p>
 
-        <h2 class="section-title">
-            Technology Platform
-        </h2>
+</div>
 
-        <div class="cards">
+</div>
 
-            <div class="card">
+<div class="pilot-item">
 
-                <h3>
-                    Customer App
-                </h3>
+<div class="pilot-number">
+03
+</div>
 
-                <p>
+<div>
 
-                    Pickup booking, address, time slot, payment and pickup tracking.
+<h3>
+Run Pickup Operations
+</h3>
 
-                </p>
+<p>
+Test booking, scheduling, collection and
+customer communication.
+</p>
 
-            </div>
+</div>
 
+</div>
 
-            <div class="card">
+<div class="pilot-item">
 
-                <h3>
-                    Rider App
-                </h3>
+<div class="pilot-number">
+04
+</div>
 
-                <p>
+<div>
 
-                    Pickup requests, navigation, status updates and proof of collection.
+<h3>
+Measure & Improve
+</h3>
 
-                </p>
+<p>
+Study customer feedback, operational costs,
+repeat usage and service quality.
+</p>
 
-            </div>
+</div>
 
+</div>
 
-            <div class="card">
+</div>
 
-                <h3>
-                    Admin Dashboard
-                </h3>
+</div>
 
-                <p>
+</section>
 
-                    Rider management, customer management, operations,
-                    payments and service monitoring.
+<!-- =========================
+     REGULATORY
+========================= -->
 
-                </p>
+<section class="regulatory" id="regulatory">
 
-            </div>
+<div class="container">
 
-        </div>
+<h2 class="section-title">
+Government & Regulatory Approach
+</h2>
 
-    </section>
+<div class="about-content">
 
+<p>
+Waste2Door intends to operate in accordance with applicable
+municipal requirements and relevant solid-waste-management
+rules.
+</p>
 
+<br>
 
-    <!-- PILOT PLAN -->
+<p>
+The operating model will prioritise coordination with
+authorised municipal bodies, approved waste-management
+partners and applicable local requirements before
+commercial-scale operations.
+</p>
 
-    <section id="pilot" class="pilot">
+</div>
 
-        <h2 class="section-title">
-            Proposed Pilot Plan
-        </h2>
+</div>
 
-        <div class="pilot-box">
+</section>
 
+<!-- =========================
+     INVESTOR PITCH DECK
+========================= -->
 
-            <div class="pilot-step">
+<section class="pitch-section" id="pitch">
 
-                <h3>
-                    Phase 1 — Regulatory & Operational Validation
-                </h3>
+<div class="container">
 
-                <p>
+<h2 class="section-title">
+Investor Pitch Deck
+</h2>
 
-                    Understand applicable municipal requirements and identify
-                    authorised waste handover locations and operating procedures.
+<p class="section-subtitle">
+Learn more about the Waste2Door opportunity,
+business model, proposed pilot and partnership vision.
+</p>
 
-                </p>
+<div class="pitch-box">
 
-            </div>
+<div class="pitch-icon">
+📊
+</div>
 
+<h3>
+Waste2Door — Investor Presentation
+</h3>
 
-            <div class="pilot-step">
+<p>
+Our current investor presentation contains
+7 slides covering the problem, proposed solution,
+business model, technology, pilot plan and
+partnership opportunity.
+</p>
 
-                <h3>
-                    Phase 2 — Select a Bengaluru Locality
-                </h3>
+<a
+href="/static/Waste2Door_Investor_Pitch_7_Slides.pptx"
+class="download-btn"
+download
 
-                <p>
+>
 
-                    Start with a controlled pilot in one selected locality
-                    with a limited number of households and riders.
+📥 Download Investor Pitch Deck </a>
 
-                </p>
+<p class="pitch-note">
+PowerPoint Presentation (.pptx)
+</p>
 
-            </div>
+</div>
 
+</div>
 
-            <div class="pilot-step">
+</section>
 
-                <h3>
-                    Phase 3 — Technology & Operations
-                </h3>
+<!-- =========================
+     WHAT WE ARE LOOKING FOR
+========================= -->
 
-                <p>
+<section id="looking">
 
-                    Develop the customer booking system, rider workflow,
-                    payment process and basic operations dashboard.
+<div class="container">
 
-                </p>
+<h2 class="section-title">
+What We Are Looking For
+</h2>
 
-            </div>
+<p class="section-subtitle">
+We are interested in conversations that can help
+validate and develop the Waste2Door concept.
+</p>
 
+<div class="cards">
 
-            <div class="pilot-step">
+<div class="card">
 
-                <h3>
-                    Phase 4 — Measure & Validate
-                </h3>
+<div class="card-icon">🤝</div>
 
-                <p>
+<h3>
+Strategic Partners
+</h3>
 
-                    Track pickup demand, customer satisfaction, operational
-                    costs, rider efficiency and repeat usage.
+<p>
+Organisations interested in exploring partnerships
+around waste collection and urban services.
+</p>
 
-                </p>
+</div>
 
-            </div>
+<div class="card">
 
+<div class="card-icon">🏘️</div>
 
-            <div class="pilot-step">
+<h3>
+Residential Communities
+</h3>
 
-                <h3>
-                    Phase 5 — Scale
-                </h3>
+<p>
+Apartment associations and communities interested
+in participating in an initial pilot.
+</p>
 
-                <p>
+</div>
 
-                    If the pilot demonstrates a sustainable and compliant
-                    operating model, expand to additional Bengaluru localities.
+<div class="card">
 
-                </p>
+<div class="card-icon">💡</div>
 
-            </div>
+<h3>
+Investors & Advisors
+</h3>
 
-        </div>
+<p>
+People interested in discussing the concept,
+pilot strategy, technology or business model.
+</p>
 
-    </section>
+</div>
 
+</div>
 
+</div>
 
-    <!-- GOVERNMENT -->
+</section>
 
-    <section>
+<!-- =========================
+     INVESTOR CTA
+========================= -->
 
-        <h2 class="section-title">
-            Government & Regulatory Approach
-        </h2>
+<section class="investor-cta">
 
-        <div class="partner-box">
+<div class="container">
 
-            <p>
+<h2>
+Interested in Waste2Door?
+</h2>
 
-                Waste2Door intends to operate only through an approved
-                and compliant waste-management process.
+<p>
+Let's discuss the concept, potential Bengaluru pilot,
+technology and partnership opportunities.
+</p>
 
-            </p>
+<a href="#contact" class="btn btn-primary">
+Contact Waste2Door
+</a>
 
-            <ul>
+</div>
 
-                <li>
-                    Seek guidance and approval from the relevant municipal authorities.
-                </li>
+</section>
 
-                <li>
-                    Identify authorised waste collection points or approved
-                    handover locations.
-                </li>
+<!-- =========================
+     CONTACT
+========================= -->
 
-                <li>
-                    Follow applicable waste segregation and transportation requirements.
-                </li>
+<section class="contact" id="contact">
 
-                <li>
-                    Begin with a controlled pilot in a selected Bengaluru locality.
-                </li>
+<div class="container">
 
-            </ul>
+<h2 class="section-title">
+Partner With Us
+</h2>
 
-        </div>
+<p class="section-subtitle">
+Have an idea, partnership opportunity or interest
+in the Waste2Door pilot? Get in touch.
+</p>
 
-    </section>
+<div class="contact-box">
 
+<form
+action="https://formspree.io/f/mzezdpol"
+method="POST"
+class="contact-form"
+>
 
+<div class="form-group">
 
-    <!-- WHAT WE ARE LOOKING FOR -->
+<label>
+Name
+</label>
 
-    <section class="looking">
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required
 
-        <h2 class="section-title">
-            What We Are Looking For
-        </h2>
+>
 
-        <div class="cards">
+</div>
 
-            <div class="card">
+<div class="form-group">
 
-                <h3>
-                    Strategic Partner
-                </h3>
+<label>
+Email
+</label>
 
-                <p>
+<input
+type="email"
+name="email"
+placeholder="Your Email"
+required
 
-                    A partner who can help with regulatory coordination,
-                    operations, technology and pilot execution.
+>
 
-                </p>
+</div>
 
-            </div>
+<div class="form-group">
 
+<label>
+Phone
+</label>
 
-            <div class="card">
+<input
+type="tel"
+name="phone"
+placeholder="Your Phone Number"
 
-                <h3>
-                    Technology Support
-                </h3>
+>
 
-                <p>
+</div>
 
-                    Support for developing the customer app, rider app,
-                    admin dashboard and operational technology.
+<div class="form-group">
 
-                </p>
+<label>
+Message
+</label>
 
-            </div>
+<textarea
+name="message"
+placeholder="Tell us about your interest or partnership idea..."
+required
+></textarea>
 
+</div>
 
-            <div class="card">
+<button
+type="submit"
+class="submit-btn"
 
-                <h3>
-                    Investment
-                </h3>
+>
 
-                <p>
+Send Message </button>
 
-                    Seed or pre-seed investment to support pilot development,
-                    technology, operations and customer acquisition.
+</form>
 
-                </p>
+</div>
 
-            </div>
+</div>
 
+</section>
 
-            <div class="card">
+<!-- =========================
+     VISION
+========================= -->
 
-                <h3>
-                    Network & Growth
-                </h3>
+<section class="vision">
 
-                <p>
+<div class="container">
 
-                    Connections with municipal stakeholders, apartment
-                    communities, partners and additional investors.
+<h2>
+Our Vision
+</h2>
 
-                </p>
+<p>
+To explore a convenient, technology-enabled and
+responsible approach to household waste pickup,
+starting with Bengaluru and learning from real
+community needs.
+</p>
 
-            </div>
+</div>
 
-        </div>
+</section>
 
-    </section>
+<!-- =========================
+     FOOTER
+========================= -->
 
+<footer>
 
+<p>
+<strong>Waste2Door</strong>
+</p>
 
-    <!-- INVESTOR PITCH DECK -->
+<p>
+Doorstep Household Waste Pickup Concept
+</p>
 
-    <section id="pitch" class="pitch-section">
+<p>
+Bengaluru, Karnataka, India
+</p>
 
-        <h2 class="section-title">
-            Investor Pitch Deck
-        </h2>
+<p>
+Email: razi.o2f@gmail.com
+</p>
 
-        <div class="pitch-box">
+<br>
 
-            <div class="pitch-icon">
-                📊
-            </div>
+<p>
+© 2026 Waste2Door. All rights reserved.
+</p>
 
-            <h3>
-                Waste2Door — Investor Presentation
-            </h3>
-
-            <p>
-                Learn more about the Waste2Door concept, problem,
-                proposed solution, business model, technology,
-                pilot plan and partnership opportunity.
-            </p>
-
-            <p>
-                Our current presentation contains 7 slides prepared
-                for potential strategic partners and investors.
-            </p>
-
-            <a
-                href="/static/Waste2Door_Investor_Pitch_7_Slides.pptx"
-                class="download-btn"
-                download
-            >
-                📥 Download Investor Pitch Deck
-            </a>
-
-            <p class="pitch-note">
-                PowerPoint Presentation (.pptx)
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- PARTNER -->
-
-    <section id="partner" class="partner">
-
-        <h2 class="section-title">
-            Seeking Strategic Partner & Investment
-        </h2>
-
-        <div class="partner-box">
-
-            <h3>
-
-                Help us turn the Waste2Door concept into a working
-                Bengaluru pilot.
-
-            </h3>
-
-            <br>
-
-            <p>
-
-                We are looking for strategic partners, startup organisations
-                and investors who may be interested in supporting the
-                development and validation of this concept.
-
-            </p>
-
-            <ul>
-
-                <li>
-                    Government and regulatory coordination
-                </li>
-
-                <li>
-                    Pilot planning and execution
-                </li>
-
-                <li>
-                    Mobile app and technology development
-                </li>
-
-                <li>
-                    Rider operations and logistics
-                </li>
-
-                <li>
-                    Customer acquisition and partnerships
-                </li>
-
-                <li>
-                    Business strategy and scaling
-                </li>
-
-                <li>
-                    Seed / pre-seed investment
-                </li>
-
-                <li>
-                    Connections with additional investors
-                </li>
-
-            </ul>
-
-            <br>
-
-            <p>
-
-                Waste2Door is currently at the concept and early development
-                stage and is seeking the right partner to jointly build
-                and validate the model.
-
-            </p>
-
-            <a href="#contact" class="btn">
-                Contact Founder
-            </a>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- VISION -->
-
-    <section>
-
-        <h2 class="section-title">
-            Our Vision
-        </h2>
-
-        <div class="business-model">
-
-            <p style="font-size:20px;">
-
-                Make responsible household waste disposal easier for people
-                who cannot depend on fixed municipal collection timings —
-                while working within the authorised municipal waste-management system.
-
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- CONTACT -->
-
-    <section id="contact" class="contact">
-
-        <h2 class="section-title">
-            Contact Waste2Door
-        </h2>
-
-        <p>
-            <strong>Founder:</strong> Razi Ahmad
-        </p>
-
-        <p>
-            <strong>Location:</strong> Bengaluru, Karnataka
-        </p>
-
-        <p>
-            <strong>Email:</strong> razi.o2f@gmail.com
-        </p>
-
-        <p>
-            <strong>Purpose:</strong> Strategic Partnership / Investment
-        </p>
-
-
-        <a href="mailto:razi.o2f@gmail.com" class="btn">
-            Contact Founder
-        </a>
-
-
-
-        <!-- PARTNER / INVESTOR FORM -->
-
-        <div class="form-box">
-
-            <h3>
-                Partner / Investor Enquiry
-            </h3>
-
-            <p>
-
-                Interested in partnering with or investing in Waste2Door?
-                Send us a message.
-
-            </p>
-
-
-            <form
-                action="https://formspree.io/f/mzezdpol"
-                method="POST"
-            >
-
-                <input
-                    type="text"
-                    name="Name"
-                    placeholder="Your Name"
-                    required
-                >
-
-
-                <input
-                    type="email"
-                    name="Email"
-                    placeholder="Your Email"
-                    required
-                >
-
-
-                <input
-                    type="text"
-                    name="Organization"
-                    placeholder="Organization / Company"
-                >
-
-
-                <textarea
-                    name="Message"
-                    rows="5"
-                    placeholder="Tell us about your partnership / investment interest"
-                    required
-                ></textarea>
-
-
-                <button
-                    type="submit"
-                    class="btn"
-                >
-                    Send Enquiry
-                </button>
-
-            </form>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        © 2026 Waste2Door. All rights reserved.
-
-    </footer>
-
+</footer>
 
 </body>
-
 </html>
-```
